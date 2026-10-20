@@ -24,7 +24,7 @@ def save_seen(seen):
     with open(STATE_FILE, "w") as f:
         json.dump(list(seen), f)
 
-def main():   send_telegram("✅ Telegram connection is working! Your glitch sniper is live.")
+def main():
     feed = feedparser.parse(RSS_URL)
     seen = load_seen()
     new_posts = 0
